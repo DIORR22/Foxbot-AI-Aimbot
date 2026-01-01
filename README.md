@@ -1,7 +1,7 @@
 ![Unbenannt](https://github.com/user-attachments/assets/ba9076b8-2fbe-4de0-b8e7-70326b11a08d)
 
 
-# 🎯 Next-Gen AI Aimbot [Arduino & Software Hybrid] 🎮
+# 🎯 Universal Next-Gen AI Aimbot [Arduino & Software Hybrid] 🎮
 
 ## 🙌 About the Project
 This tool utilizes **YOLOv5** for real-time detection of humanoid characters. While the AI logic is based on the RootKit-Org framework, the core of this project lies in the hardware interface.
