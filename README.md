@@ -34,9 +34,14 @@ Modern anti-cheat systems often block virtual mouse inputs. This project demonst
 
 
 ## 🚀 Pre-setup Steps
-1.  **Download:** Extract the repository 🗂️.
-2.  **Python:** Install [Python 3.11.x](https://www.python.org/downloads/release/python-3110/) (Important: Check **"Add Python to PATH"** during installation!) 🐍.
-3.  **Hardware Setup (Optional):** If using an Arduino, flash the `.ino` file via [Arduino IDE](https://www.arduino.cc/en/software) and note the COM port.
+* **Download:** Extract the repository to a folder of your choice 🗂️.
+* **Python:** Install [Python 3.11.x](https://www.python.org/downloads/release/python-3110/) (Important: Check **"Add Python to PATH"** during installation!) 🐍.
+* **Hardware Setup (Optional - for Arduino Users):**
+    1. **Connect:** Plug your Arduino Leonardo into your PC.
+    2. **Open Sketch:** Open the file `Arduino_Mouse_HID.ino` (located in the Arduino folder) with the [Arduino IDE](https://www.arduino.cc/en/software).
+    3. **Select Board:** Go to **Tools > Board** and select **Arduino Leonardo**.
+    4. **Flash:** Click the **Upload** arrow (top left) to flash the code to your hardware.
+    5. **Note COM Port:** After flashing, check **Tools > Port** and remember your port (e.g., `COM3`). You will need this later in the Bot's S-Menu.
 
 4.  **Installation Commands:**
     * **Nvidia GPU Users:**
@@ -95,8 +100,8 @@ Modern anti-cheat systems often block virtual mouse inputs. This project demonst
 * **Low FPS:** Check `onnxChoice` or reduce `screenShotHeight`. 🏎️
 
 ## 📜 Credits
-* **Basis:** RootKit-Org (Core logic, config & selection).
-* **AI Engine:** YOLOv5 by Ultralytics.
+* **Basis:** [RootKit-Org](https://github.com/RootKit-Org) (Core logic, config & selection).
+* **AI Engine:** [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5).
 
 **Have fun with the project! 🎉👾**
 
