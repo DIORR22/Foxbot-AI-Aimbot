@@ -100,7 +100,7 @@ Modern anti-cheat systems often block virtual mouse inputs. This project demonst
 * **Low FPS:** Check `onnxChoice` or reduce `screenShotHeight`. 🏎️
 
 ## 📜 Credits
-* **Basis:** [RootKit-Org](https://github.com/RootKit-Org) (Core logic, config & selection).
+* **Basis:** [RootKit-Org](https://github.com/RootKit-Org/AI-Aimbot) (Core logic, config & selection).
 * **AI Engine:** [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5).
 
 **Have fun with the project! 🎉👾**
