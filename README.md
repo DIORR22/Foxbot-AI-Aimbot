@@ -104,4 +104,3 @@ Modern anti-cheat systems often block virtual mouse inputs. This project demonst
 * **AI Engine:** [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5).
 
 **Have fun with the project! 🎉👾**
-
