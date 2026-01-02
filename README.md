@@ -97,22 +97,17 @@ If you have questions, feel free to add me on Discord:
 * **[END] 💣:** Exit (Closes the script immediately).
 
 
-## ⚙️ Configurable Settings (config.py)
+## ⚙️ Configurable Settings (`config.py`)
 
-### 🖥️ Screen Settings
-* **Capture Area:** `screenShotHeight` / `Width` (Default: 320)
-* **UI Masking:** `useMask` (True/False) — Hides UI elements. 🎭
-* **Mask Specs:** `maskSide`, `maskWidth`, `maskHeight`
-
-### 🎯 Aimbot Logic
-* **Smoothing:** `aaMovementAmp` (0.1 - 1.0) — Adjusts aim speed. ⚖️
-* **Precision:** `confidence` (Default: 0.4) — Detection sensitivity. 🧐,
-* **Targeting:** `headshot_mode`, `headshot_offset`, `centerOfScreen`. ❤️
-
-### 🔌 System & Hardware
-* **Hardware Mouse:** `use_arduino` (True for Leonardo). 🔌
-* **Connection:** `arduino_port` (e.g., 'COM7').
-* **Performance:** `visuals`, `cpsDisplay`, `onnxChoice`. 🏎️
+| Category | Variable | Default | Description |
+| :--- | :--- | :--- | :--- |
+| **Visuals** | `screenShotHeight` / `Width` | `320` | Size of the AI detection window. |
+| | `useMask` | `False` | Hides UI elements to avoid false detections. |
+| **Logic** | `aaMovementAmp` | `0.5` | Smoothing: Lower = slower/more natural. |
+| | `confidence` | `0.4` | How sure the AI must be to lock on. |
+| | `headshot_mode` | `True` | Aim for the head instead of center mass. |
+| **System** | `use_arduino` | `False` | Set to `True` for Leonardo Hardware. |
+| | `onnxChoice` | `1` | 1=CPU, 2=AMD, 3=NVIDIA. |
 
 
 ## 🛠️ Troubleshooting
