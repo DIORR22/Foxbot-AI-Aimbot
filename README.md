@@ -1,3 +1,9 @@
+# 🎯 Universal Next-Gen AI Aimbot
+
+![Status](https://img.shields.io/badge/Status-Stable-green?style=for-the-badge) ![Windows](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D4?style=for-the-badge&logo=windows&logoColor=white) ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white) ![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white) ![AMD](https://img.shields.io/badge/GPU-AMD%20Support-ED1C24?style=for-the-badge&logo=amd&logoColor=white) ![License](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)
+
+
+
 ![Status](https://img.shields.io/badge/Status-Stable-green?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
@@ -7,9 +13,7 @@
 
 
 ![Unbenannt](https://github.com/user-attachments/assets/ba9076b8-2fbe-4de0-b8e7-70326b11a08d)
-![FPS](https://img.shields.io/badge/Speed-140%20FPS-orange?style=for-the-badge&logo=speedtest&logoColor=white)
-![Model](https://img.shields.io/badge/Model-YOLOv5s--320-blueviolet?style=for-the-badge)
-![Latency](https://img.shields.io/badge/Latency-%3C10ms-success?style=for-the-badge)
+
 
 # 🎯 Universal Next-Gen AI Aimbot [Arduino & Software Hybrid] 🎮
 
