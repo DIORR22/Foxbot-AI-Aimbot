@@ -99,30 +99,35 @@ If you have questions, feel free to add me on Discord:
 
 ## ⚙️ Configurable Settings (`config.py`)
 
-| Category | Variable | Default | Description |
+| Feature | Variable | Default | Description |
 | :--- | :--- | :--- | :--- |
-| **🖥️ Screen** | `screenShotHeight` / `Width` | `320` | Size of the capture area (Square) |
-| | `useMask` | `False` | Hides UI elements (Minimap etc.) |
-| | `maskSide` / `Width` / `Height` | - | Specs for the UI mask |
-| **🎯 Aimbot** | `aaMovementAmp` | `0.45` | Speed of mouse movement (Lower = smoother) |
-| | `confidence` | `0.4` | Detection threshold (0.0 - 1.0) |
-| | `headshot_mode` | `True` | Target the head instead of the chest |
-| | `headshot_offset` | `0.4` | Vertical offset (Higher = higher aim) |
-| | `centerOfScreen` | `True` | Prioritize targets closest to crosshair |
-| **⌨️ Hotkeys** | `hotkeyAimbot` | `PAGEDOWN` | Toggle/Hold key for the Aimbot |
-| | `hotkeyRMB` | `CAPS` | Toggle for RMB-requirement mode |
-| | `aaQuitKey` | `END` | Immediately closes the script |
-| **🏎️ System** | `onnxChoice` | `3` | AI Engine: 1=CPU, 2=AMD, 3=NVIDIA |
-| | `use_arduino` | `True` | Set to `True` to use Leonardo Hardware |
-| | `arduino_port` | `COM7` | The COM port of your Arduino |
-| | `visuals` | `True` | Shows the AI vision window with boxes |
+| **🏎️ Performance** | `visuals` | `False` | Preview window with AI boxes (Keep `False` for max FPS) |
+| | `onnxChoice` | `1` | Device: 1=CPU, 2=AMD, 3=NVIDIA |
+| **🔌 Hardware** | `use_arduino` | `True` | `True` for Leonardo HID / `False` for win32api |
+| | `arduino_port` | `?` | Needs to be set to your COM Port (e.g. 'COM7') |
+| **🎯 Aiming** | `aaMovementAmp` | `0.4` | Speed/Smoothing. **Highly dependent on In-Game Sense!** |
+| | `confidence` | `0.4` | Detection threshold (Lower = more detections) |
+| | `centerOfScreen`| `True` | Prioritizes targets closest to your crosshair |
+| **🧠 Targeting** | `headshot_mode` | `True` | Toggles between Head and Body aim |
+| | `headshot_offset`| `0.35` | Height adjustment (0.35 = Head, 0.2 = Chest) |
+| **⌨️ Controls** | `hotkeyAimbot` | `PAGEDOWN`| Toggle key to activate/deactivate the bot |
+| | `hotkeyRMB` | `CAPS` | Switch for "Hold-to-Aim" mode |
+| | `aaQuitKey` | `END` | Emergency stop key for the script |
 
+---
 
-## 🛠️ Troubleshooting
-* **Won't aim:** Set game to Windowed mode and enable "Raw Input". 🖥️
-* **Jittery mouse:** Lower `aaMovementAmp` and disable Mouse Acceleration. 🖱️
-* **Access Denied:** Close Arduino IDE Serial Monitor! 🔌
-* **Low FPS:** Check `onnxChoice` or reduce `screenShotHeight`. 🏎️
+### 💡 Optimization Tips
+
+> [!TIP]
+> **Performance Boost:** We set `visuals = False` by default to ensure the lowest possible input lag. Only enable it if you want to debug the AI detection visually.
+
+> [!TIP]
+> **Accuracy & Sensitivity:** If the bot "shakes" or overshoots, lower your `aaMovementAmp`. Note that your **In-Game Sensitivity** directly affects this: Higher in-game sense requires a lower `aaMovementAmp` to stay smooth. A value between `0.3` and `0.5` is usually the sweet spot.
+
+> [!TIP]
+> **Finding your COM Port:** If you are using an Arduino, open the **Windows Device Manager**, look under **Ports (COM & LPT)**, and find the number assigned to your "Arduino Leonardo". Enter this in the `config.py` (e.g., `'COM7'`).
+
+---
 
 ## 🗺️ Roadmap & Project Status
 Features marked with `[x]` are already integrated and working:
