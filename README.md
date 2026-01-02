@@ -75,14 +75,22 @@ If you have questions, feel free to add me on Discord:
         ```
 
 
-        ## 🔌 How to Run & Configure
-1.  **Game Preparation:** Set your game to **Windowed** or **Borderless Window** mode. 🖥️
-2.  **Terminal Navigation:** Open PowerShell, type `cd ` (with a space), drag your folder in, and press Enter.
-3.  **Start:** Run `python main.py`
-4.  **The S-Menu 🛠️:** Press **'S'** for the interactive setup.
-    * Confirm your COM port (if using Arduino).
-    * Select your device (`CPU`, `AMD`, or `NVIDIA`).
-5.  **Final Launch 🚀:** Press **ENTER** to arm the bot and select your game.
+## 🔌 How to Run & Configure
+
+1. **Game Preparation:** Set your game to **Windowed** or **Borderless Window** mode. 🖥️
+2. **Terminal Navigation:** Open PowerShell or CMD and navigate to the project folder:
+    * **Option A (Easy):** Type `cd ` (with a space), drag your folder into the terminal, and press **Enter**.
+    * **Option B (Manual):** Type the full path, e.g., `cd "C:\Users\Name\Documents\Foxbot-AI"`.
+3. **Start:** Run the script with: `python main.py`
+4. **The S-Menu 🛠️:** Press **'S'** for the interactive setup:
+    * Skip settings by pressing **ENTER**.
+    * **Arduino Mode:** When prompted, type **'y'** and press **Enter**.
+    * **COM Port:** Enter your port (e.g., `COM3`).
+    * **Device:** Select your engine (`CPU`, `AMD`, or `NVIDIA`).
+5. **Final Launch 🚀:** Press **ENTER** and choose your game window to arm the bot, then switch to your game.
+
+> [!TIP]
+> You can skip the S-Menu entirely by manually editing the `config.py` file with any text editor to save your preferred settings without the script.
 
 ## ⌨️ Hotkeys & Controls (Default)
 * **[CAPS] 🎯:** Master Switch (Toggles the Aimbot ON/OFF).
