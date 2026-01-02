@@ -132,14 +132,14 @@ If you have questions, feel free to add me on Discord:
 ## 🗺️ Roadmap & Project Status
 Features marked with `[x]` are already integrated and working:
 
-* [x] **Hybrid Input:** Support for both Arduino Hardware and Software Mouse ✅
-* [x] **Cross-Platform GPU:** Acceleration via CUDA (NVIDIA) and DirectML (AMD) ✅
-* [x] **S-Menu Configuration:** Change settings like Amp and Confidence on the fly ✅
-* [x] **Adjustable Smoothing:** Integrated movement amplification for better control ✅
+* [x] **Hybrid Input:** Support for both Arduino Hardware and Software Mouse 
+* [x] **Cross-Platform GPU:** Acceleration via CUDA (NVIDIA) and DirectML (AMD) 
+* [x] **S-Menu Configuration:** Change settings like Amp and Confidence on the fly 
+* [x] **Adjustable Smoothing:** Integrated movement amplification for better control 
 * [ ] **Triggerbot:** Auto-fire when a target is locked 🔫
-* [ ] **Custom Game Models:** Dedicated AI weights for games like CS2 or Valorant 🎮
+* [ ] **Custom Game Models:** Dedicated AI weights for different games
 * [ ] **TensorRT Support:** Conversion to `.engine` for maximum NVIDIA performance 🏎️
-* [ ] **Bezier Curves:** Researching human-like mouse paths (Bezier/Splines) 📈
+* [ ] **Bezier Curves:** Researching human-like mouse paths (Bezier/Splines) 
 
 > [!CAUTION]
 > **Regarding Custom Models:** Use of game-specific models increases the risk of detection by Anti-Cheat systems. These features are intended for **educational and offline research purposes only**. I do not take responsibility for any bans or consequences.
