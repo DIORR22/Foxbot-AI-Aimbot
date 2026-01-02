@@ -103,4 +103,8 @@ Modern anti-cheat systems often block virtual mouse inputs. This project demonst
 * **Basis:** [RootKit-Org](https://github.com/RootKit-Org/AI-Aimbot) (Core logic, config & selection).
 * **AI Engine:** [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5).
 
+## ⚖️ License
+This project is licensed under the **GNU General Public License v3.0**.  
+See the [LICENSE](LICENSE) file for more details. Based on the work of [RootKit-Org](https://github.com/RootKit-Org/AI-Aimbot).
+
 **Have fun with the project! 🎉👾**
