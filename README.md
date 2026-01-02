@@ -1,8 +1,7 @@
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 ![AMD](https://img.shields.io/badge/GPU-AMD%20Support-ED1C24?style=for-the-badge&logo=amd&logoColor=white)
-![Arduino](https://img.shields.io/badge/Hardware-Arduino%20Leonardo-00979D?style=for-the-badge&logo=arduino&logoColor=white)
-
+![Hardware](https://img.shields.io/badge/Hardware-ATmega32U4%20Bridge-orange?style=for-the-badge&logo=microchip&logoColor=white)
 ![Unbenannt](https://github.com/user-attachments/assets/ba9076b8-2fbe-4de0-b8e7-70326b11a08d)
 
 # 🎯 Universal Next-Gen AI Aimbot [Arduino & Software Hybrid] 🎮
@@ -42,16 +41,17 @@ If you have questions, feel free to add me on Discord:
 * **GPU (NVIDIA):** GTX 10-series or newer & [NVIDIA CUDA Toolkit 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive) (Recommended for speed).
 * **GPU (AMD):** DirectX 12 compatible.
 * **Input Method (Choose one):**
-    * **Hardware (Recommended):** Arduino Leonardo (ATmega32U4) for undetectable HID mouse emulation.
-    * **Software:** Standard Windows Mouse API (No extra hardware needed, but less secure).
-* **Software:** [Arduino IDE](https://www.arduino.cc/en/software) (Only if using Arduino).
+    * **Software Emulation:** Uses standard Windows API. No extra hardware needed—works instantly.
+    * **Hardware Bridge:** Supports **ATmega32U4-based boards** (e.g., Leonardo, Pro Micro). This provides native HID mouse signals for maximum bypass security.
+
+* **Additional Software:** [Arduino IDE](https://www.arduino.cc/en/software) (Only if you use a hardware bridge).
 
 
 ## 🚀 Pre-setup Steps
 * **Download:** Extract the repository to a folder of your choice 🗂️.
 * **Python:** Install [Python 3.11.x](https://www.python.org/downloads/release/python-3110/) (Important: Check **"Add Python to PATH"** during installation!) 🐍.
 * **Hardware Setup (Optional - for Arduino Users):**
-    1. **Connect:** Plug your Arduino Leonardo into your PC.
+    1. **Connect:** Plug your **ATmega32U4-based HID-compatible board** into your PC.
     2. **Open Sketch:** Open the file `Arduino_Mouse_HID.ino` (located in the Arduino folder) with the [Arduino IDE](https://www.arduino.cc/en/software).
     3. **Select Board:** Go to **Tools > Board** and select **Arduino Leonardo**.
     4. **Flash:** Click the **Upload** arrow (top left) to flash the code to your hardware.
