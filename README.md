@@ -18,7 +18,8 @@ Modern anti-cheat systems often block virtual mouse inputs. This project demonst
 * **Awareness:** The goal is to raise awareness among developers regarding these hardware-based vulnerabilities.
 
 > ⚠ **Important Note:** Use at your own risk. If you get caught, you’ve been warned! I assume no liability for any consequences or game bans. Use this knowledge responsibly!
-
+> 
+[![Discord](https://img.shields.io/badge/Discord-Contact%20Me-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/DEINE_DISCORD_ID)
 
 ## 🚀 One System - Full Flexibility
 
