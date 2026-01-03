@@ -20,7 +20,7 @@ confidence = 0.4
 headshot_mode = True
 
 # Vertical Offset: Adjusts the aim height (0.35: Head | 0.2: Chest)
-headshot_offset = 0.4
+headshot_offset = 0.38
 
 # Selection Logic: Focuses on the enemy closest to your crosshair
 centerOfScreen = True
@@ -40,10 +40,10 @@ hotkeyRMB = 'PAGEDOWN'
 visuals = False
 
 # Hardware Interface: 'True' for Arduino HID, 'False' for Windows Mouse API
-use_arduino = True
+use_arduino = False
 
 # Serial Connection: Set this to your Arduino's COM Port (e.g., 'COM7')
-arduino_port = 'COM7'
+arduino_port = 'COM?'
 
 # Processing Engine: 1 = CPU, 2 = AMD (DirectML), 3 = NVIDIA (CUDA)
-onnxChoice = 3
+onnxChoice = 1
