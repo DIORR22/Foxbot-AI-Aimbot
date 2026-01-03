@@ -24,7 +24,7 @@ banner_text = r'''
    / ____/___  _  __   / /_  ____  / /_  
   / /_  / __ \| |/_/  / __ \/ __ \/ __/  
  / __/ / /_/ />  <   / /_/ / /_/ / /_    
-/_/    \____/_/|_|  /_.___/\____/\__/    v1.0'''
+/_/    \____/_/|_|  /_.___/\____/\__/    v1.1.1'''
 
 def get_vk_code(key_name):
     key_str = str(key_name).upper().strip()
@@ -101,10 +101,10 @@ def start_logic():
         print(f" 2. Confidence:      {colored(config.confidence, 'yellow')}")
         print(f" 3. Headshot Mode:   {colored('Yes' if config.headshot_mode else 'No', 'green' if config.headshot_mode else 'red')}")
         print(f" 4. Head Offset:     {colored(config.headshot_offset, 'yellow')}")
-        print(f" 5. Visuals:         {colored('Yes' if config.visuals else 'No', 'green' if config.visuals else 'red')}")
-        print(f" 6. Arduino Mode:    {colored('ENABLED' if config.use_arduino else 'DISABLED', 'green' if config.use_arduino else 'cyan')}")
-        print(f" 7. COM Port:        {colored(config.arduino_port if config.use_arduino else 'N/A', 'cyan')}")
-        print(f" 8. RMB Delay:       {colored(getattr(config, 'hotkeyDelay', 0.25), 'yellow')}s")
+        print(f" 5. RMB Delay:       {colored(getattr(config, 'hotkeyDelay', 0.25), 'yellow')}")
+        print(f" 6. Visuals:         {colored('Yes' if config.visuals else 'No', 'green' if config.visuals else 'red')}")
+        print(f" 7. Arduino Mode:    {colored('ENABLED' if config.use_arduino else 'DISABLED', 'green' if config.use_arduino else 'cyan')}")
+        print(f" 8. COM Port:        {colored(config.arduino_port if config.use_arduino else 'N/A', 'cyan')}")
         print(f" 9. AI Device:       {colored(current_device, 'magenta')}")
         print(f" 10. Toggle Key:     {colored(config.hotkeyAimbot, 'green')}")
         print(f" 11. Mode Key:       {colored(config.hotkeyRMB, 'magenta')}")
@@ -125,16 +125,16 @@ def start_logic():
                 elif val == 'n': save_config_value("headshot_mode", False)
                 val = input(f" 4. Head Offset ({config.headshot_offset}): ");
                 if val: save_config_value("headshot_offset", float(val))
-                val = input(f" 5. Visuals (y/n): ").lower(); 
+                val = input(f" 5. RMB Delay ({getattr(config, 'hotkeyDelay', 0.25)}): ");
+                if val: save_config_value("hotkeyDelay", float(val))
+                val = input(f" 6. Visuals (y/n): ").lower(); 
                 if val == 'y': save_config_value("visuals", True)
                 elif val == 'n': save_config_value("visuals", False)
-                val = input(f" 6. Arduino Mode (y/n): ").lower();
+                val = input(f" 7. Arduino Mode (y/n): ").lower();
                 if val == 'y': save_config_value("use_arduino", True)
                 elif val == 'n': save_config_value("use_arduino", False)
-                val = input(f" 7. COM Port ({config.arduino_port}): "); 
+                val = input(f" 8. COM Port ({config.arduino_port}): "); 
                 if val: save_config_value("arduino_port", val)
-                val = input(f" 8. RMB Delay ({getattr(config, 'hotkeyDelay', 0.25)}): ");
-                if val: save_config_value("hotkeyDelay", float(val))
                 val = input(f" 9. AI Device (CPU, AMD, NVIDIA): ").strip().upper(); 
                 if val == "CPU": save_config_value("onnxChoice", 1)
                 elif val == "AMD": save_config_value("onnxChoice", 2)
@@ -251,7 +251,6 @@ def start_logic():
                                     rmb_down_time = time.time()
                                     was_rmb_pressed = True
                                 
-                                # Hier wird die Variable aus der Config genutzt
                                 h_delay = getattr(config, 'hotkeyDelay', 0.25)
                                 if (time.time() - rmb_down_time) > h_delay:
                                     rmb_ok = True
