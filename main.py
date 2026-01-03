@@ -66,7 +66,7 @@ def save_config_value(variable, new_value):
             if line.strip().startswith(f"{variable} ="):
                 if isinstance(new_value, bool):
                     f.write(f"{variable} = {new_value}\n")
-                elif variable in ["onnxChoice", "aaMovementAmp", "confidence", "headshot_offset"]:
+                elif variable in ["onnxChoice", "aaMovementAmp", "confidence", "headshot_offset", "hotkeyDelay"]:
                     f.write(f"{variable} = {new_value}\n")
                 else:
                     f.write(f"{variable} = '{new_value}'\n")
@@ -104,10 +104,11 @@ def start_logic():
         print(f" 5. Visuals:         {colored('Yes' if config.visuals else 'No', 'green' if config.visuals else 'red')}")
         print(f" 6. Arduino Mode:    {colored('ENABLED' if config.use_arduino else 'DISABLED', 'green' if config.use_arduino else 'cyan')}")
         print(f" 7. COM Port:        {colored(config.arduino_port if config.use_arduino else 'N/A', 'cyan')}")
-        print(f" 8. AI Device:       {colored(current_device, 'magenta')}")
-        print(f" 9. Toggle Key:      {colored(config.hotkeyAimbot, 'green')}")
-        print(f" 10. Mode Key:       {colored(config.hotkeyRMB, 'magenta')}")
-        print(f" 11. Exit Key:       {colored(config.aaQuitKey, 'red')}")
+        print(f" 8. RMB Delay:       {colored(getattr(config, 'hotkeyDelay', 0.25), 'yellow')}s")
+        print(f" 9. AI Device:       {colored(current_device, 'magenta')}")
+        print(f" 10. Toggle Key:     {colored(config.hotkeyAimbot, 'green')}")
+        print(f" 11. Mode Key:       {colored(config.hotkeyRMB, 'magenta')}")
+        print(f" 12. Exit Key:       {colored(config.aaQuitKey, 'red')}")
         print(colored("-" * 65, "white"))
         print("Press " + colored("ENTER", "green", attrs=['bold']) + " to Start or " + colored("'s'", "yellow", attrs=['bold']) + " for Settings.")
         
@@ -132,15 +133,17 @@ def start_logic():
                 elif val == 'n': save_config_value("use_arduino", False)
                 val = input(f" 7. COM Port ({config.arduino_port}): "); 
                 if val: save_config_value("arduino_port", val)
-                val = input(f" 8. AI Device (CPU, AMD, NVIDIA): ").strip().upper(); 
+                val = input(f" 8. RMB Delay ({getattr(config, 'hotkeyDelay', 0.25)}): ");
+                if val: save_config_value("hotkeyDelay", float(val))
+                val = input(f" 9. AI Device (CPU, AMD, NVIDIA): ").strip().upper(); 
                 if val == "CPU": save_config_value("onnxChoice", 1)
                 elif val == "AMD": save_config_value("onnxChoice", 2)
                 elif val == "NVIDIA": save_config_value("onnxChoice", 3)
-                val = input(f" 9. Toggle Key ({config.hotkeyAimbot}): "); 
+                val = input(f" 10. Toggle Key ({config.hotkeyAimbot}): "); 
                 if val: save_config_value("hotkeyAimbot", val.upper())
-                val = input(f" 10. Mode Key ({config.hotkeyRMB}): "); 
+                val = input(f" 11. Mode Key ({config.hotkeyRMB}): "); 
                 if val: save_config_value("hotkeyRMB", val.upper())
-                val = input(f" 11. Exit Key ({config.aaQuitKey}): "); 
+                val = input(f" 12. Exit Key ({config.aaQuitKey}): "); 
                 if val: save_config_value("aaQuitKey", val.upper())
                 print(colored("\n[OK] Settings Saved!", "green")); time.sleep(0.5); continue 
             except Exception as e:
@@ -248,7 +251,9 @@ def start_logic():
                                     rmb_down_time = time.time()
                                     was_rmb_pressed = True
                                 
-                                if (time.time() - rmb_down_time) > 0.25:
+                                # Hier wird die Variable aus der Config genutzt
+                                h_delay = getattr(config, 'hotkeyDelay', 0.25)
+                                if (time.time() - rmb_down_time) > h_delay:
                                     rmb_ok = True
                                 else:
                                     rmb_ok = False

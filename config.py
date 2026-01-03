@@ -35,6 +35,9 @@ hotkeyAimbot = 'CAPS'
 # Toggle Mode: Force the bot to only work while holding RMB or a specific key
 hotkeyRMB = 'PAGEDOWN'
 
+# Delay for RMB-Requirement: Time in seconds before aimbot activates after pressing the key
+hotkeyDelay = 0.25
+
 # --- SYSTEM & VISUALS ---
 # Debug Window: Shows AI vision. Set to 'False' for maximum FPS and lowest latency
 visuals = False
