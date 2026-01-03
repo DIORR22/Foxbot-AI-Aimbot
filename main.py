@@ -27,7 +27,6 @@ banner_text = r'''
 /_/    \____/_/|_|  /_.___/\____/\__/    v1.0'''
 
 def get_vk_code(key_name):
-    """Wandelt den String aus der Config in einen virtuellen Key-Code um"""
     key_str = str(key_name).upper().strip()
     key_map = {
         "END": win32con.VK_END,
@@ -182,6 +181,10 @@ def start_logic():
     aimbot_enabled = False
     latency_ms = 0.0
     current_cps = 0
+    window_name = "Aimbot Visuals"
+
+    rmb_down_time = 0
+    was_rmb_pressed = False
 
     try:
         while True:
@@ -238,7 +241,23 @@ def start_logic():
 
                     if i == 0:
                         mouseMove = [target_x - cWidth, target_y - cHeight]
-                        rmb_ok = rmb_pressed if require_rmb else True
+                        
+                        if require_rmb:
+                            if rmb_pressed:
+                                if not was_rmb_pressed:
+                                    rmb_down_time = time.time()
+                                    was_rmb_pressed = True
+                                
+                                if (time.time() - rmb_down_time) > 0.25:
+                                    rmb_ok = True
+                                else:
+                                    rmb_ok = False
+                            else:
+                                was_rmb_pressed = False
+                                rmb_ok = False
+                        else:
+                            rmb_ok = True
+
                         if aimbot_active and rmb_ok:
                             tx = int((mouseMove[0] * config.aaMovementAmp) / 1.5)
                             ty = int((mouseMove[1] * config.aaMovementAmp) / 1.5)
@@ -256,17 +275,15 @@ def start_logic():
                         color = (115, 244, 113) if i == 0 else (244, 113, 116)
                         cv2.rectangle(display_frame, (int(xMid-box_w/2), int(yMid-box_h/2)), (int(xMid+box_w/2), int(yMid+box_h/2)), color, 2)
                         if i == 0:
-                            # Ziellinie und Punkt
                             cv2.line(display_frame, (int(cWidth), int(cHeight)), (int(target_x), int(target_y)), (0, 255, 255), 1)
                             cv2.circle(display_frame, (int(target_x), int(target_y)), 3, (0, 0, 255), -1)
 
             if config.visuals and display_frame is not None:
-                # Texte im Visual-Fenster
                 cv2.putText(display_frame, f"CPS: {current_cps}", (10, 25), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv2.LINE_AA)
                 status_text = "AIM: ACTIVE" if aimbot_active else "AIM: INACTIVE"
                 status_color = (0, 255, 0) if aimbot_active else (0, 0, 255)
                 cv2.putText(display_frame, status_text, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.6, status_color, 1, cv2.LINE_AA)
-                cv2.imshow("Aimbot Visuals", display_frame); cv2.waitKey(1)
+                cv2.imshow(window_name, display_frame); cv2.waitKey(1)
 
             latency_ms = (time.perf_counter() - loop_start) * 1000
             count += 1
@@ -309,4 +326,4 @@ def start_logic():
 if __name__ == "__main__":
     try: start_logic()
     except Exception as e:
-        import traceback; traceback.print_exception(e)
+        import traceback; traceback.print_exception(e)s

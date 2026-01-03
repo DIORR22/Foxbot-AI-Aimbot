@@ -20,7 +20,7 @@ confidence = 0.4
 headshot_mode = True
 
 # Vertical Offset: Adjusts the aim height (0.35: Head | 0.2: Chest)
-headshot_offset = 0.35
+headshot_offset = 0.4
 
 # Selection Logic: Focuses on the enemy closest to your crosshair
 centerOfScreen = True
@@ -30,14 +30,14 @@ centerOfScreen = True
 aaQuitKey = 'END'
 
 # Activation Key: Use this key to toggle or hold the Aimbot
-hotkeyAimbot = 'PAGEDOWN'
+hotkeyAimbot = 'CAPS'
 
 # Toggle Mode: Force the bot to only work while holding RMB or a specific key
-hotkeyRMB = 'CAPS'
+hotkeyRMB = 'PAGEDOWN'
 
 # --- SYSTEM & VISUALS ---
 # Debug Window: Shows AI vision. Set to 'False' for maximum FPS and lowest latency
-visuals = True
+visuals = False
 
 # Hardware Interface: 'True' for Arduino HID, 'False' for Windows Mouse API
 use_arduino = True
